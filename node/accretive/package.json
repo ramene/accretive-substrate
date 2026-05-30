@@ -1,0 +1,19 @@
+{
+  "name": "@accretive-substrate/accretive",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.mjs",
+  "exports": {
+    ".": "./src/index.mjs",
+    "./schema": "./src/schema.mjs",
+    "./store": "./src/store.mjs",
+    "./canonical-paths": "./src/canonical-paths.mjs"
+  },
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "dependencies": {
+    "pg": "^8.11.0"
+  }
+}

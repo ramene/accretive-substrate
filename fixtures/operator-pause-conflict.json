@@ -1,0 +1,33 @@
+{
+  "name": "operator-pause-conflict",
+  "description": "Strong buy adjudication but unconfirmed accretion says NO BUY. Proposed $ > threshold → operator_required (pause).",
+  "evidence_package": {
+    "trigger": { "kind": "buy_proposal", "symbol": "SOL-USDT", "venue": "kucoin", "agent_id": 6 },
+    "signals": [
+      { "source": "kucoin-scanner", "direction": "bullish", "confidence": 0.72 }
+    ],
+    "accretions": [
+      {
+        "id": 99,
+        "canonical_path": "per-symbol:_default",
+        "operator_confirmed": false,
+        "fact": "PAUSE BUYS during low-FNG fear windows (provisional, coach proposed)",
+        "operator": "coach",
+        "provenance_class": "coach_provisional",
+        "appended_at": "2026-06-01T12:00:00Z"
+      }
+    ],
+    "prior_trades": [],
+    "gate_state": { "active": [], "blocking": [] },
+    "regime_state": { "regime": "SIDEWAYS", "confidence": 0.78 },
+    "fng": { "index": 25, "classification": "fear" },
+    "brain_cascade_health": { "tier1_ok": true },
+    "empirical_priors": {},
+    "aletheia_state": { "weights": { "sources": { "kucoin-scanner": 0.6 } } },
+    "market_state": { "funding_rate": 0.0006, "change_24h_pct": 1.2 },
+    "proposed_position": { "estimated_dollar": 100, "agent_position_dollar_floor": 20 }
+  },
+  "expected_adjudication": { "verdict": "buy" },
+  "expected_guardrail": { "policy_applied": "pause" },
+  "expected_final_verdict": "operator_required"
+}

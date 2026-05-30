@@ -1,0 +1,27 @@
+{
+  "name": "crash-without-accretion-leaks-buy",
+  "description": "Buy proposal during CRASH regime. Regime votes hold, aletheia votes buy (bullish signal at trusted weight), crypto-majors votes sell. WITHOUT an operator-authored 'block buys in CRASH' accretion, the highest-confidence voice (aletheia) wins by weighted-majority — even though the dissent is severe. This is the bridge claim made concrete: surfacing this conflict in the dashboard is exactly the moment the operator authors a confirmed accretion that future debates cite. Paired fixture crash-blocked-by-accretion.json demonstrates the post-promotion path.",
+  "evidence_package": {
+    "trigger": { "kind": "buy_proposal", "symbol": "ETH-USDT", "venue": "kucoin", "agent_id": 6 },
+    "signals": [
+      { "source": "kucoin-scanner", "direction": "bullish", "confidence": 0.65 }
+    ],
+    "accretions": [],
+    "prior_trades": [],
+    "gate_state": { "active": [], "blocking": [] },
+    "regime_state": { "regime": "CRASH", "confidence": 0.88 },
+    "fng": { "index": 12, "classification": "extreme_fear" },
+    "brain_cascade_health": { "tier1_ok": true },
+    "empirical_priors": {},
+    "aletheia_state": { "weights": { "sources": { "kucoin-scanner": 0.5 } } },
+    "market_state": { "funding_rate": -0.001, "change_24h_pct": -8.2 },
+    "proposed_position": { "estimated_dollar": 10, "agent_position_dollar_floor": 10 }
+  },
+  "expected_voices": {
+    "regime": "hold",
+    "aletheia": "buy",
+    "crypto-majors": "sell"
+  },
+  "expected_adjudication": { "verdict": "buy" },
+  "expected_final_verdict": "execute"
+}

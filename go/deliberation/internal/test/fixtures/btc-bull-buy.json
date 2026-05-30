@@ -1,0 +1,32 @@
+{
+  "name": "btc-bull-buy",
+  "description": "BTC-USDT BUY proposal, BULL regime, healthy funding+trend, kucoin-scanner trusted. Expect: regime=buy, aletheia=buy, crypto-majors=buy, others=abstain. Adjudication: buy. Guardrail: pass clean.",
+  "evidence_package": {
+    "trigger": { "kind": "buy_proposal", "symbol": "BTC-USDT", "venue": "kucoin", "agent_id": 6 },
+    "signals": [
+      { "source": "kucoin-scanner", "direction": "bullish", "confidence": 0.74 }
+    ],
+    "accretions": [],
+    "prior_trades": [],
+    "gate_state": { "active": [], "blocking": [] },
+    "regime_state": { "regime": "BULL", "confidence": 0.82 },
+    "fng": { "index": 62, "classification": "greed" },
+    "brain_cascade_health": { "tier1_ok": true, "tier2_ok": true },
+    "empirical_priors": {},
+    "aletheia_state": { "weights": { "sources": { "kucoin-scanner": 0.62 } } },
+    "market_state": { "funding_rate": 0.0008, "change_24h_pct": 2.4 },
+    "proposed_position": { "symbol": "BTC-USDT", "qty": 0.001, "estimated_dollar": 10, "agent_position_dollar_floor": 10 }
+  },
+  "expected_voices": {
+    "regime": "buy",
+    "aletheia": "buy",
+    "empirical-prior": "abstain",
+    "crypto-majors": "buy",
+    "equities": "abstain",
+    "memes": "abstain",
+    "defi": "abstain",
+    "polymarket": "abstain"
+  },
+  "expected_adjudication": { "verdict": "buy" },
+  "expected_final_verdict": "execute"
+}

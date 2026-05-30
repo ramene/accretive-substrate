@@ -1,0 +1,38 @@
+{
+  "name": "crash-blocked-by-accretion",
+  "description": "Same CRASH-regime buy proposal as crash-without-accretion-leaks-buy.json, but THIS time an UNCONFIRMED 'PAUSE BUYS in CRASH' accretion exists in scope. Proposed position $50 > threshold $25 (max(floor×2=20, 25)) → soft-conflict policy=pause → final_verdict=operator_required. This is the paired fixture showing the bridge closed: the dashboard surfaces the unconfirmed accretion, the operator promotes it, future debates cite it as a confirmed prior and the loop is closed.",
+  "evidence_package": {
+    "trigger": { "kind": "buy_proposal", "symbol": "ETH-USDT", "venue": "kucoin", "agent_id": 6 },
+    "signals": [
+      { "source": "kucoin-scanner", "direction": "bullish", "confidence": 0.65 }
+    ],
+    "accretions": [
+      {
+        "id": 88,
+        "canonical_path": "gate-def:crash-block-buys",
+        "operator_confirmed": false,
+        "fact": "PAUSE BUYS during CRASH regime conf>=0.8 — coach proposed after 3 consecutive losing trades in last CRASH window",
+        "operator": "coach",
+        "provenance_class": "coach_provisional",
+        "appended_at": "2026-06-02T14:00:00Z"
+      }
+    ],
+    "prior_trades": [],
+    "gate_state": { "active": [], "blocking": [] },
+    "regime_state": { "regime": "CRASH", "confidence": 0.88 },
+    "fng": { "index": 12, "classification": "extreme_fear" },
+    "brain_cascade_health": { "tier1_ok": true },
+    "empirical_priors": {},
+    "aletheia_state": { "weights": { "sources": { "kucoin-scanner": 0.5 } } },
+    "market_state": { "funding_rate": -0.001, "change_24h_pct": -8.2 },
+    "proposed_position": { "estimated_dollar": 50, "agent_position_dollar_floor": 10 }
+  },
+  "expected_voices": {
+    "regime": "hold",
+    "aletheia": "buy",
+    "crypto-majors": "sell"
+  },
+  "expected_adjudication": { "verdict": "buy" },
+  "expected_guardrail": { "policy_applied": "pause" },
+  "expected_final_verdict": "operator_required"
+}
