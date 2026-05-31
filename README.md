@@ -45,9 +45,6 @@ accretive-substrate/
 ├── go/
 │   ├── accretive/           # github.com/ramene/accretive-substrate/go/accretive
 │   └── deliberation/        # github.com/ramene/accretive-substrate/go/deliberation
-├── docs/
-│   ├── ACCRETIVE-RETROFIT-SPEC.md       # rationale for the substrate
-│   └── PHASE-B-DELIBERATION-SCOPE.md    # 6-stage deliberation loop design
 ├── examples/
 │   └── accretive-proof.sh   # litmus test for the substrate
 └── fixtures/                # bridge fixtures — the operator-authorship story made concrete
